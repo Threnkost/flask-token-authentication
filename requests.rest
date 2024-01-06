@@ -1,0 +1,7 @@
+POST http://127.0.0.1:4997/api
+
+###
+
+GET http://127.0.0.1:5000/products
+
+Authorization: 'Token asd123'

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Unauthorized</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="w-screen h-screen bg-zinc-900 flex flex-col items-center justify-center">
+            <p class="text-zinc-200 font-bold text-xl">HTTP {{ context.status }}</p>
+            <p class="text-zinc-100 mb-3">{{ context.message }}</p>
+            <form class="flex flex-col gap-3" action="http://127.0.0.1:5000/api" method="GET">
+                <input class="w-full py-0.5 px-1" type="text" placeholder="Your token..." name="token">
+                <button type="submit" class="bg-green-600 text-zinc-100 w-full py-0.5 px-1">
+                    Authorize
+                </button>
+            </form>
+        </div>
+    </body>
+</html>
